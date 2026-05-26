@@ -29,7 +29,7 @@ public interface OgrenciRepository extends JpaRepository<Ogrenci, Long> {
     List<Ogrenci> find10AGirls();
 
     // Ogrenci numarasi 5 ile 10 arasinda olan kiz ogrencileri listeleyiniz.
-    String QUESTION_5 = "select * from ogrenci where cinsiyet = 'K' and ogrno between 5 and 10;";
+    String QUESTION_5 = "select * from ogrenci where cinsiyet = 'K' and ogrno between 6 and 10;";
     @Query(value = QUESTION_5, nativeQuery = true)
     List<Ogrenci> findGirlsWithOgrno();
 

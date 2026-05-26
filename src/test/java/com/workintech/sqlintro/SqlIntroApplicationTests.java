@@ -5,7 +5,6 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -49,7 +48,7 @@ class SqlIntroApplicationTests {
 		assertEquals(ogrenciRepository.find10AGirls().get(0).getSoyad(), "Yiğit");
 	}
 
-	@DisplayName("Öğrenci numarası 5 ile 10 arasında olan Kız öğrencileri listeleyiniz.")
+	@DisplayName("Öğrenci numarası 5 ile 10 arasında olan kız öğrencileri listeleyiniz.")
 	@Test
 	void getFindGirlsWithOgrnoTest(){
 		assertEquals(ogrenciRepository.findGirlsWithOgrno().size(), 3);
@@ -86,7 +85,7 @@ class SqlIntroApplicationTests {
 		assertEquals(ogrenciRepository.findElderStudent().getSoyad(), "Emin");
 	}
 
-	@DisplayName("İkinci harfi E olan kitapları listeleyiniz..")
+	@DisplayName("İkinci harfi E olan öğrencileri listeleyiniz.")
 	@Test
 	void findBooksSecondLetterOfNTest(){
 		assertEquals(ogrenciRepository.findStudentsSecondLetterOfN().size(), 5);
